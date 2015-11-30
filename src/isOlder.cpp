@@ -28,6 +28,16 @@ int validate(int day, int month, int year)
 		{
 			if (year % 4 == 0)
 			{
+				if (year % 100 == 0)
+				{
+					if (year % 400 == 0)
+					{
+						if (day > 0 && day <= 29)
+							return 1;
+						else
+							return 0;
+					}
+				}
 				if (day > 0 && day <= 29)
 					return 1;
 				else
